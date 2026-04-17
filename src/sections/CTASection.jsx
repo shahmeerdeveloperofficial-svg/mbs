@@ -13,7 +13,7 @@ function CTASection() {
   return (
     <section className="relative overflow-hidden py-20 sm:py-24">
       <div className="section-shell grid items-center gap-12 lg:grid-cols-[1fr_1.05fr]">
-        <div>
+        <div data-reveal="left">
           <SectionBadge>About Our School</SectionBadge>
           <h2 className="mt-8 max-w-[560px] font-display text-5xl font-extrabold leading-tight sm:text-6xl">
             <span className="text-brand-green">Guide The Young</span>
@@ -28,10 +28,10 @@ function CTASection() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px]">
-          <img src={send24} alt="" className="absolute left-16 top-1/2 hidden w-24 animate-drift lg:block" />
-          <img src={send42} alt="" className="absolute left-10 top-2 hidden w-24 animate-float-slow lg:block" />
-          <img src={send44} alt="" className="absolute bottom-0 right-16 hidden w-14 animate-swing lg:block" />
+        <div className="relative min-h-[420px]" data-reveal="right" data-delay="120">
+          <img src={send24} alt="" className="absolute left-16 top-1/2 hidden w-24 animate-drift lg:block" data-fly data-speed="0.16" data-direction="-1" />
+          <img src={send42} alt="" className="absolute left-10 top-2 hidden w-24 animate-float-slow lg:block" data-fly data-speed="0.18" />
+          <img src={send44} alt="" className="absolute bottom-0 right-16 hidden w-14 animate-swing lg:block" data-fly data-speed="0.14" />
           <img src={send48} alt="" className="absolute left-0 bottom-8 hidden w-24 lg:block" />
           <img src={send57} alt="" className="absolute left-2 top-6 hidden w-20 lg:block" />
 

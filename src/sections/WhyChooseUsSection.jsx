@@ -24,13 +24,13 @@ const reasons = [
 function WhyChooseUsSection() {
   return (
     <section id="blog" className="relative overflow-hidden py-20 sm:py-24">
-      <img src={send32} alt="" className="absolute left-0 top-16 hidden w-24 lg:block" />
-      <img src={send19} alt="" className="absolute right-10 top-2 hidden w-24 animate-drift lg:block" />
-      <img src={send20} alt="" className="absolute left-1/4 bottom-24 hidden w-24 lg:block" />
-      <img src={send52} alt="" className="absolute left-0 bottom-0 hidden w-24 lg:block" />
+      <img src={send32} alt="" className="absolute left-0 top-16 hidden w-24 lg:block" data-fly data-speed="0.16" data-direction="-1" />
+      <img src={send19} alt="" className="absolute right-10 top-2 hidden w-24 animate-drift lg:block" data-fly data-speed="0.2" />
+      <img src={send20} alt="" className="absolute left-1/4 bottom-24 hidden w-24 lg:block" data-fly data-speed="0.12" />
+      <img src={send52} alt="" className="absolute left-0 bottom-0 hidden w-24 lg:block" data-fly data-speed="0.14" data-direction="-1" />
 
       <div className="section-shell grid items-center gap-14 lg:grid-cols-[1fr_0.95fr]">
-        <div>
+        <div data-reveal="left">
           <SectionBadge className="bg-transparent px-0 py-0 text-brand-yellow shadow-none">
             Our Different
           </SectionBadge>
@@ -54,6 +54,8 @@ function WhyChooseUsSection() {
                       ? 'bg-brand-yellow text-white'
                       : 'bg-brand-green text-white'
                 }`}
+                data-reveal="zoom"
+                data-delay={String(100 + index * 100)}
               >
                 <h3 className="font-display text-3xl font-bold">{reason.title}</h3>
                 <p className="mt-3 text-base leading-8 text-white/90">{reason.text}</p>
@@ -62,7 +64,7 @@ function WhyChooseUsSection() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative" data-reveal="right" data-delay="140">
           <img src={send78} alt="Kids on book" className="mx-auto w-full max-w-[520px]" />
         </div>
       </div>

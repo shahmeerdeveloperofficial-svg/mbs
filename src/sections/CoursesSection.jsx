@@ -37,27 +37,31 @@ function CoursesSection() {
 
       <div className="section-shell">
         <div className="mx-auto max-w-3xl text-center">
-          <SectionBadge>Playing in Learning</SectionBadge>
-          <h2 className="mt-6 font-display text-5xl font-extrabold leading-none sm:text-6xl">
+          <div data-reveal="zoom">
+            <SectionBadge>Playing in Learning</SectionBadge>
+          </div>
+          <h2 className="mt-6 font-display text-5xl font-extrabold leading-none sm:text-6xl" data-reveal data-delay="90">
             <span className="text-brand-green">Our</span>{' '}
             <span className="text-brand-yellow">Courses</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-brand-green">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-brand-green" data-reveal data-delay="180">
             Nurturing every age group with joyful milestones, hands-on discovery, and gentle
             classroom guidance.
           </p>
-          <div className="mt-8 flex items-center justify-center gap-5">
-            <img src={send24} alt="" className="w-24 animate-drift" />
+          <div className="mt-8 flex items-center justify-center gap-5" data-reveal data-delay="260">
+            <img src={send24} alt="" className="w-24 animate-drift" data-fly data-speed="0.16" />
             <img src={send27} alt="" className="w-16 animate-pulse-soft" />
             <img src={send28} alt="" className="w-32" />
           </div>
         </div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-3">
-          {courseCards.map((course) => (
+          {courseCards.map((course, index) => (
             <article
               key={course.title}
               className="group overflow-hidden rounded-[34px] bg-white shadow-card transition duration-300 hover:-translate-y-3 hover:shadow-soft"
+              data-reveal="zoom"
+              data-delay={String(120 + index * 110)}
             >
               <div className="relative p-4 pb-0">
                 <PlaceholderImage className="h-[260px] w-full rounded-[30px_30px_0_0]" />

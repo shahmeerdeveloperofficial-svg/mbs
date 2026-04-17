@@ -29,10 +29,12 @@ function FooterSection() {
     <footer className="relative overflow-hidden bg-brand-cream pt-16">
       <div className="section-shell">
         <div className="grid gap-6 lg:grid-cols-3">
-          {footerBlocks.map((block) => (
+          {footerBlocks.map((block, index) => (
             <div
               key={block.title}
               className={`${block.bg} rounded-[34px] px-8 py-10 text-center text-white shadow-card transition hover:-translate-y-2`}
+              data-reveal="zoom"
+              data-delay={String(80 + index * 100)}
             >
               <img src={block.icon} alt={block.title} className="mx-auto h-16 w-16" />
               <h3 className="mt-6 font-display text-3xl font-bold">{block.title}</h3>
@@ -45,7 +47,7 @@ function FooterSection() {
         </div>
 
         <div className="grid gap-10 py-12 lg:grid-cols-[0.95fr_0.85fr_0.9fr_0.8fr]">
-          <div>
+          <div data-reveal="left">
             <div className="flex items-center gap-4">
               <div className="grid h-16 w-16 place-items-center rounded-[22px] bg-brand-green text-2xl font-black text-white shadow-soft">
                 M
@@ -65,7 +67,7 @@ function FooterSection() {
             </p>
           </div>
 
-          <div>
+          <div data-reveal data-delay="100">
             <h3 className="font-display text-3xl font-bold text-brand-green">Contact</h3>
             <div className="mt-5 space-y-3 text-base leading-8 text-slate-500">
               <p>
@@ -81,7 +83,7 @@ function FooterSection() {
             </div>
           </div>
 
-          <div>
+          <div data-reveal data-delay="180">
             <h3 className="font-display text-3xl font-bold text-brand-green">Quick Links</h3>
             <div className="mt-5 flex flex-col gap-3 text-base font-bold text-slate-500">
               <a href="#home" className="transition hover:text-brand-green">
@@ -99,7 +101,7 @@ function FooterSection() {
             </div>
           </div>
 
-          <div className="lg:justify-self-end">
+          <div className="lg:justify-self-end" data-reveal="right" data-delay="260">
             <h3 className="font-display text-3xl font-bold text-brand-green">Follow Us</h3>
             <p className="mt-5 text-base leading-8 text-slate-500">
               Stay connected for updates, events, and school stories.

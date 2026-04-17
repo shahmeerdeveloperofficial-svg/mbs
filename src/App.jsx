@@ -8,8 +8,11 @@ import CTASection from './sections/CTASection';
 import DiscoverTalentsSection from './sections/DiscoverTalentsSection';
 import WhyChooseUsSection from './sections/WhyChooseUsSection';
 import FooterSection from './sections/FooterSection';
+import useSiteMotion from './hooks/useSiteMotion';
 
 function App() {
+  useSiteMotion();
+
   return (
     <div className="overflow-x-hidden bg-brand-cream text-slate-900">
       <Navbar />

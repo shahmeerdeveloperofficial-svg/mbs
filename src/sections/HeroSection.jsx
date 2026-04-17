@@ -35,39 +35,61 @@ function HeroSection() {
       />
 
       <div className="section-shell grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="relative z-10 pt-8 lg:pt-12">
-          <FloatingAsset src={send7} alt="pencil" className="-left-4 top-12 hidden lg:block" />
+        <div className="relative z-10 pt-8 lg:pt-12" data-reveal="left">
+          <FloatingAsset
+            src={send7}
+            alt="pencil"
+            className="-left-4 top-12 hidden lg:block"
+            data-fly
+            data-speed="0.22"
+            data-rotate="10"
+            data-direction="-1"
+          />
           <FloatingAsset
             src={send8}
             alt="bulb"
             className="right-14 top-8 hidden lg:block"
             animation="animate-float-fast"
+            data-fly
+            data-speed="0.18"
+            data-rotate="8"
           />
           <FloatingAsset
             src={seend9}
             alt="book"
             className="-left-8 bottom-28 hidden lg:block"
             animation="animate-drift"
+            data-fly
+            data-speed="0.16"
+            data-direction="-1"
           />
 
-          <div className="mb-5 inline-flex rounded-full bg-brand-yellow px-7 py-3 text-lg font-bold text-white shadow-soft">
+          <div
+            className="mb-5 inline-flex rounded-full bg-brand-yellow px-7 py-3 text-lg font-bold text-white shadow-soft"
+            data-reveal="zoom"
+            data-delay="80"
+          >
             20% off for early bird
           </div>
-          <h1 className="max-w-[620px] font-display text-5xl font-extrabold leading-[0.95] text-brand-yellow sm:text-6xl lg:text-7xl">
+          <h1
+            className="max-w-[620px] font-display text-5xl font-extrabold leading-[0.95] text-brand-yellow sm:text-6xl lg:text-7xl"
+            data-reveal
+            data-delay="140"
+          >
             Best Education
             <span className="mt-2 block text-brand-green">For Your Kids.</span>
           </h1>
-          <p className="mt-6 max-w-[560px] text-lg leading-8 text-slate-500">
+          <p className="mt-6 max-w-[560px] text-lg leading-8 text-slate-500" data-reveal data-delay="220">
             A playful, story-driven learning experience where curiosity grows through
             creativity, confidence, and cheerful classroom adventures.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-wrap gap-4" data-reveal data-delay="300">
             <Button>Register Now</Button>
             <Button variant="outline">Know More</Button>
           </div>
 
-          <div className="mt-10 flex items-center gap-3">
+          <div className="mt-10 flex items-center gap-3" data-reveal data-delay="360">
             <span className="h-4 w-4 rounded-full bg-brand-green" />
             <span className="h-4 w-4 rounded-full bg-[#5ca67a]" />
             <span className="h-4 w-4 rounded-full bg-[#7bc29a]" />
@@ -75,7 +97,7 @@ function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[620px]">
+        <div className="relative mx-auto w-full max-w-[620px]" data-reveal="right" data-delay="120">
           <img
             src={seend10}
             alt=""
@@ -93,6 +115,9 @@ function HeroSection() {
               <div
                 key={title}
                 className={`story-ring hidden h-36 w-36 flex-col items-center justify-center rounded-full bg-brand-yellow text-center text-white shadow-soft lg:flex ${offset}`}
+                data-fly
+                data-speed="0.14"
+                data-rotate="6"
               >
                 <img src={icon} alt={title} className="mb-3 h-8 w-8" />
                 <p className="font-display text-2xl font-bold leading-none">{title}</p>

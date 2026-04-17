@@ -28,8 +28,10 @@ function ActivitiesSection() {
 
       <div className="section-shell">
         <div className="text-center">
-          <SectionBadge>Things For Kids</SectionBadge>
-          <h2 className="mt-6 font-display text-5xl font-extrabold sm:text-6xl">
+          <div data-reveal="zoom">
+            <SectionBadge>Things For Kids</SectionBadge>
+          </div>
+          <h2 className="mt-6 font-display text-5xl font-extrabold sm:text-6xl" data-reveal data-delay="100">
             <span className="text-brand-green">Kids</span>{' '}
             <span className="text-brand-yellow">Activities</span>
           </h2>
@@ -40,6 +42,8 @@ function ActivitiesSection() {
             <div
               key={activity.title}
               className="group flex items-start gap-6 rounded-[34px] bg-white p-6 shadow-card transition duration-300 hover:-translate-y-2"
+              data-reveal={index % 2 === 0 ? 'left' : 'right'}
+              data-delay={String(120 + index * 100)}
             >
               <div
                 className={`grid h-16 w-16 shrink-0 place-items-center rounded-full ${activity.accent} shadow-soft`}
@@ -58,6 +62,9 @@ function ActivitiesSection() {
                   src={send24}
                   alt=""
                   className="absolute -left-6 bottom-8 hidden w-24 animate-drift lg:block"
+                  data-fly
+                  data-speed="0.16"
+                  data-direction="-1"
                 />
               )}
             </div>
@@ -67,6 +74,8 @@ function ActivitiesSection() {
             src={seend7}
             alt=""
             className="absolute left-1/2 top-1/2 hidden w-24 -translate-x-1/2 -translate-y-1/2 animate-drift lg:block"
+            data-fly
+            data-speed="0.12"
           />
         </div>
       </div>
