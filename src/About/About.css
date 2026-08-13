@@ -1,0 +1,929 @@
+@import url('../../../App.css');
+
+.about_div {
+    position: absolute;
+    top: 1800px;
+}
+
+.about_title {
+    text-decoration: underline;
+    font-family: 'RecoletaAlt';
+    font-size: 27px;
+    color: var(--primaryColor);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.about_desp {
+    text-decoration: underline;
+    font-family: 'RecoletaAlt';
+    font-size: 65px;
+    color: var(--blueColor);
+    margin-bottom: 0;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.about_btn {
+    padding: 15px 30px 15px 30px;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    background: var(--darkColor);
+    color: var(--blueColor);
+    border-radius: 50px;
+    border: none;
+}
+
+.about_btn_active {
+    background: var(--blueColor);
+    color: var(--whiteColor);
+}
+
+.about_message_div {
+    background: var(--whiteColor);
+    border-radius: 40px;
+    padding: 40px 30px 40px 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.about_message_title {
+    font-family: 'RecoletaAlt';
+    font-size: 35px;
+    color: var(--blueColor);
+    margin-bottom: 0;
+}
+
+.about_message_desp {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 0;
+    margin-top: 23px;
+}
+
+.about_owner_name {
+    font-family: 'RecoletaAlt';
+    font-size: 31px;
+    color: var(--primaryColor);
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.about_designation {
+    font-family: 'Montserrat';
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 5px;
+}
+
+.owner_bg_img {
+    height: 280px;
+}
+
+.owner_img {
+    position: absolute;
+    height: 277px;
+    left: 18px;
+}
+
+.owner_ellipse_img {
+    position: absolute;
+    left: 16px;
+    top: -5px;
+    height: 280px;
+}
+
+.message_yellow_img {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    animation: rotateInCircle 8s linear infinite;
+}
+
+@keyframes rotateInCircle {
+    0% {
+        transform: rotate(0deg) translateX(130px) rotate(0deg);
+        /* Adjust translateX distance for circular path */
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(130px) rotate(-360deg);
+        /* Complete rotation */
+    }
+}
+
+.about_line_img {
+    position: absolute;
+    right: 0;
+    top: -206px;
+    clip-path: inset(0 0 100% 100%);
+    animation: drawLines 3s linear infinite;
+}
+
+@keyframes drawLines {
+    0% {
+        clip-path: inset(0 0 0 100%);
+        /* Fully hidden */
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0%);
+        /* Fully visible */
+    }
+}
+
+.history_line {
+    clip-path: inset(0 0 0 100%);
+    animation: historydrawLine 3s linear infinite;
+}
+
+@keyframes historydrawLine {
+    0% {
+        clip-path: inset(0 0 0 100%);
+        /* Fully hidden */
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0%);
+        /* Fully visible */
+    }
+}
+
+.about_rocket_img {
+    position: absolute;
+    right: 364px;
+    top: -56px;
+}
+
+.about_ellipse_img {
+    position: absolute;
+    right: 0px;
+    top: -100px;
+}
+
+.about_ellipse_img_one {
+    position: absolute;
+    left: 0;
+    top: 250px;
+    width: 190px;
+}
+
+.homework_img {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+
+.graduation_img {
+    position: absolute;
+    right: -80px;
+    top: 530px;
+    z-index: 1;
+}
+
+.about_ellipse_img_two {
+    position: absolute;
+    right: 350px;
+    top: -170px;
+}
+
+.red_img,
+.yellow_img,
+.red_img_one {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform-origin: 50% 50%;
+    animation: rotateInCircle 8s linear infinite;
+}
+
+.red_img {
+    animation-delay: 0s;
+}
+
+.yellow_img {
+    animation-delay: 1s;
+}
+
+.red_img_one {
+    animation-delay: 2s;
+}
+
+@keyframes rotateInCircle {
+    0% {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+        /* Adjust translateX for radius */
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+        /* Full rotation */
+    }
+}
+
+.history_rocket_img {
+    position: absolute;
+    left: 526px;
+    top: 120px;
+}
+
+.history_div {
+    padding-top: 7rem;
+    padding-bottom: 2rem;
+}
+
+.history_title {
+    font-family: 'RecoletaAlt';
+    font-size: 45px;
+    color: var(--blueColor);
+}
+
+.history_desp {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin-bottom: 0;
+    max-width: 50rem;
+}
+
+.history_desp_one {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.professional_title {
+    font-family: 'RecoletaAlt';
+    font-size: 24px;
+    color: var(--blueColor);
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.professional_subtitle {
+    font-family: 'Montserrat';
+    font-size: 34px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.professional_desp {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    margin-bottom: 0;
+    text-align: center;
+    width: 650px;
+}
+
+.arrow_pro {
+    position: absolute;
+    width: 200px;
+    left: -56px;
+    top: -68px;
+    animation: moveProLeftRight 2s ease-in-out infinite alternate;
+}
+
+@keyframes moveProLeftRight {
+    0% {
+        transform: translateX(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateX(50px);
+        /* Move 100px to the right */
+    }
+}
+
+.row_div {
+    padding-top: 3rem;
+    position: relative;
+}
+
+.text-teal {
+    color: var(--blueColor);
+}
+
+.rounded-circle {
+    border: 4px solid #f8f9fa;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff1467;
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.hat_img {
+    color: #B5B5B5;
+    width: 70px;
+    animation: movehatTopBottom 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes movehatTopBottom {
+    0% {
+        transform: translateY(0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateY(-20px);
+        /* Move 20px up */
+    }
+}
+
+@keyframes floatArrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 200px !important;
+    width: 100px !important;
+    height: 50px !important;
+    cursor: pointer;
+    animation: floatArrow 2s infinite ease-in-out;
+}
+
+.slick-prev {
+    left: -81px !important;
+}
+
+.slick-next {
+    right: -85px !important;
+}
+
+.currculum_bg {
+    background-image: url("../../../assets/images/curriculum.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.History_Ellipse_img {
+    position: absolute;
+    right: -100px;
+    top: 120px;
+}
+
+.History_Water_img {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 190px;
+}
+
+.history_line_img {
+    position: absolute;
+    right: 0;
+    top: -20px;
+    clip-path: inset(0 0 100% 100%);
+    animation: drawLines 3s linear infinite;
+    z-index: 1;
+}
+
+.cur_rocket_img {
+    position: absolute;
+    left: 1069px;
+    top: 130px;
+}
+
+.cur_div {
+    padding-top: 8rem;
+}
+
+.cur_line {
+    width: 100%;
+    position: absolute;
+    top: 150px;
+    z-index: 0;
+}
+
+.cur_row_div {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 3rem;
+}
+
+.cur_body_data {
+    background: var(--whiteColor);
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.cur_body_data:hover {
+    background-color: #FFAA00;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+
+.cur_img {
+    position: relative;
+    z-index: 1;
+}
+
+.cur_imageone {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    z-index: 0;
+}
+
+.cur_imagecir {
+    position: absolute;
+    right: 30px;
+    top: -2px;
+    animation: movecurTopBottom 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes movecurTopBottom {
+    0% {
+        transform: translateY(0px);
+        /* Start position */
+    }
+
+    100% {
+        transform: translateY(12px);
+        /* Move down smoothly */
+    }
+}
+
+.cur_item {
+    font-family: 'RecoletaAlt';
+    font-size: 27px;
+    color: var(--blueColor);
+    margin-bottom: 0;
+}
+
+.cur_body_data:hover .cur_item {
+    font-weight: 900;
+}
+.cur_desp {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.cur_homwork {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+.cur_video {
+    position: absolute;
+    right: -30px;
+    top: 350px;
+}
+
+.cur_book {
+    position: absolute;
+    left: 0px;
+    top: 600px;
+}
+
+.cur_brain {
+    position: absolute;
+    right: -10px;
+    top: 750px;
+}
+
+.cur_world {
+    position: absolute;
+    left: -10px;
+    bottom: -20px;
+}
+
+.history_img {
+    width: 100%;
+}
+
+@media(min-width: 1200px) and (max-width: 1400px) {
+    .history_line {
+        width: 450px;
+    }
+
+    .history_rocket_img {
+        left: 447px;
+        top: 105px;
+    }
+
+    .yellow_img {
+        top: 40%;
+        left: 52%;
+    }
+
+    .red_img {
+        top: 40%;
+        left: 54%;
+    }
+
+    .red_img_one {
+        top: 45%;
+        left: 55%;
+    }
+
+    .history_desp {
+        max-width: 40rem;
+    }
+
+    .cur_rocket_img {
+        position: absolute;
+        left: 749px;
+        top: 130px;
+    }
+
+    .cur_div {
+        padding-top: 13rem;
+    }
+}
+
+@media(min-width: 992px) and (max-width: 1200px) {
+    .about_line_img {
+        width: 300px;
+        top: -150px;
+    }
+
+    .about_rocket_img {
+        right: 300px;
+        top: -26px;
+    }
+
+    .graduation_img {
+        right: -10px;
+        width: 150px;
+        top: 650px;
+    }
+
+    .about_ellipse_img_two {
+        right: 200px;
+    }
+
+    .history_line {
+        width: 380px;
+    }
+
+    .history_rocket_img {
+        left: 378px;
+        top: 90px;
+    }
+
+    .yellow_img {
+        top: 27%;
+        left: 58%;
+    }
+
+    .red_img {
+        top: 45%;
+        left: 60%;
+    }
+
+    .red_img_one {
+        top: 45%;
+        left: 60%;
+    }
+
+    .history_desp {
+        max-width: 100%;
+    }
+
+    .History_Ellipse_img {
+        display: none;
+    }
+
+    .History_Water_img {
+        display: none;
+    }
+
+    .cur_rocket_img {
+        position: absolute;
+        left: 540px;
+        top: 130px;
+    }
+
+    .cur_div {
+        padding-top: 13rem;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 992px) {
+    .about_div {
+        top: 2300px;
+    }
+
+    .about_line_img {
+        width: 100px;
+        top: -165px;
+    }
+
+    .about_desp {
+        font-size: 40px;
+    }
+
+    .about_rocket_img {
+        right: 202px;
+        top: -80px;
+    }
+
+    .graduation_img {
+        right: -20px;
+        width: 150px;
+        top: 850px;
+    }
+
+    .about_ellipse_img_two {
+        right: 200px;
+    }
+
+    .history_line {
+        display: none;
+    }
+
+    .history_rocket_img {
+        display: none;
+    }
+
+    .yellow_img {
+        top: 1%;
+        left: 44%;
+    }
+
+    .red_img {
+        top: 5%;
+        left: 47%;
+    }
+
+    .red_img_one {
+        top: 5%;
+        left: 50%;
+    }
+
+    .owner_img {
+        left: 192px;
+    }
+
+    .owner_ellipse_img {
+        left: 190px;
+        top: -5px;
+        height: 280px;
+    }
+
+    .history_div {
+        padding-top: 12rem;
+        padding-bottom: 2rem;
+    }
+
+    .history_desp {
+        max-width: 100%;
+    }
+
+    .History_Ellipse_img {
+        display: none;
+    }
+
+    .History_Water_img {
+        display: none;
+    }
+
+    .cur_rocket_img {
+        position: absolute;
+        left: 326px;
+        top: 130px;
+    }
+
+    .cur_div {
+        padding-top: 13rem;
+    }
+}
+
+@media(min-width: 576px) and (max-width: 768px) {
+    .about_div {
+        top: 2400px;
+    }
+
+    .homework_img {
+        top: -100px;
+    }
+
+    .about_line_img {
+        width: 150px;
+        top: -172px;
+    }
+
+    .about_desp {
+        font-size: 35px;
+    }
+
+    .about_btn {
+        padding: 15px 15px 15px 15px;
+        font-size: 12px;
+    }
+
+    .about_rocket_img {
+        right: 152px;
+        top: -110px;
+    }
+
+    .graduation_img {
+        display: none;
+    }
+
+    .about_ellipse_img_two {
+        display: none;
+    }
+
+    .history_line {
+        display: none;
+    }
+
+    .history_rocket_img {
+        display: none;
+    }
+
+    .yellow_img {
+        display: none;
+    }
+
+    .red_img {
+        display: none;
+    }
+
+    .red_img_one {
+        display: none;
+    }
+
+    .owner_img {
+        left: 102px;
+    }
+
+    .owner_ellipse_img {
+        left: 100px;
+    }
+
+    .history_div {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .History_Ellipse_img {
+        display: none;
+    }
+
+    .History_Water_img {
+        display: none;
+    }
+
+    .history_img {
+        width: 50%;
+    }
+
+    .history_line_img {
+        display: none;
+    }
+
+    .cur_rocket_img {
+        display: none;
+    }
+
+    .cur_div {
+        padding-top: 3rem;
+    }
+
+    .cur_homwork {
+        display: none;
+    }
+}
+
+@media(max-width: 576px) {
+    .about_div {
+        top: 2500px;
+    }
+
+    .homework_img {
+        top: -100px;
+    }
+
+    .about_line_img {
+        width: 150px;
+        top: -172px;
+    }
+
+    .about_desp {
+        font-size: 35px;
+    }
+
+    .about_btn {
+        padding: 15px 12px 15px 12px;
+        font-size: 10px;
+    }
+
+    .about_rocket_img {
+        right: 152px;
+        top: -110px;
+    }
+
+    .graduation_img {
+        display: none;
+    }
+
+    .about_ellipse_img_two {
+        display: none;
+    }
+
+    .history_line {
+        display: none;
+    }
+
+    .history_rocket_img {
+        display: none;
+    }
+
+    .yellow_img {
+        display: none;
+    }
+
+    .red_img {
+        display: none;
+    }
+
+    .red_img_one {
+        display: none;
+    }
+
+    .owner_img {
+        left: 48px;
+    }
+
+    .owner_ellipse_img {
+        left: 48px;
+    }
+
+    .history_div {
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+
+    .History_Ellipse_img {
+        display: none;
+    }
+
+    .History_Water_img {
+        display: none;
+    }
+
+    .history_img {
+        width: 50%;
+    }
+
+    .history_line_img {
+        display: none;
+    }
+
+    .cur_rocket_img {
+        display: none;
+    }
+
+    .cur_div {
+        padding-top: 3rem;
+    }
+
+    .cur_homwork {
+        display: none;
+    }
+}
+
+html {
+  scroll-behavior: smooth;
+}

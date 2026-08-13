@@ -40,6 +40,53 @@
     box-shadow: 0 0 0 10px rgba(244, 180, 0, 0.08);
   }
 
+  .message-orbit {
+    --orbit-size: 136px;
+  }
+
+  .message-orbit-dot {
+    animation: leadershipOrbit 9s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .modal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #0f6b3e transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .modal-scroll::-webkit-scrollbar-button,
+  .modal-scroll::-webkit-scrollbar-corner {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar-track {
+    margin: 14px 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar-thumb {
+    min-height: 70px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    border-radius: 999px;
+    background: #0f6b3e;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  .modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #f4b400;
+  }
+
   [data-reveal] {
     opacity: 0;
     transform: translate3d(0, 42px, 0) scale(0.98);
@@ -70,5 +117,15 @@
     transform: translate3d(var(--fly-x, 0), var(--fly-y, 0), 0) rotate(var(--fly-r, 0deg));
     transition: transform 0.2s linear;
     will-change: transform;
+  }
+}
+
+@keyframes leadershipOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(var(--orbit-size)) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(var(--orbit-size)) rotate(-360deg);
   }
 }
