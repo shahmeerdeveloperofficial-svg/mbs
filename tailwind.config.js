@@ -6,9 +6,17 @@ export default {
       colors: {
         brand: {
           green: '#0f6b3e',
+          'green-dark': '#0a4b2b',
+          'green-light': '#e9f5ed',
           yellow: '#f4b400',
+          'yellow-light': '#fef7e0',
+          'yellow-hover': '#e0a500',
+          red: '#f5222d',
+          'red-light': '#ffe8e8',
+          orange: '#e4573d',
           dark: '#0b2d4c',
           cream: '#fff9ef',
+          blue: '#1976d2',
         },
       },
       fontFamily: {
@@ -17,7 +25,10 @@ export default {
       },
       boxShadow: {
         soft: '0 18px 40px rgba(15, 107, 62, 0.12)',
-        card: '0 15px 40px rgba(16, 24, 40, 0.10)',
+        card: '0 15px 40px rgba(16, 24, 40, 0.08)',
+        hover: '0 20px 45px rgba(15, 107, 62, 0.18)',
+        glow: '0 0 25px rgba(244, 180, 0, 0.35)',
+        'glow-green': '0 0 25px rgba(15, 107, 62, 0.30)',
       },
       keyframes: {
         float: {
@@ -36,6 +47,13 @@ export default {
           '0%, 100%': { transform: 'scale(1)', opacity: '0.95' },
           '50%': { transform: 'scale(1.05)', opacity: '1' },
         },
+        shimmer: {
+          '100%': { transform: 'translateX(100%)' },
+        },
+        modalCardIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95) translateY(12px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
+        },
       },
       animation: {
         'float-slow': 'float 4.5s ease-in-out infinite',
@@ -43,6 +61,8 @@ export default {
         drift: 'drift 6s ease-in-out infinite',
         swing: 'swing 5s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 3.6s ease-in-out infinite',
+        shimmer: 'shimmer 2s infinite',
+        'modal-in': 'modalCardIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards',
       },
       backgroundImage: {
         checker:

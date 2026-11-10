@@ -9,6 +9,21 @@ function useSiteMotion() {
     const flyElements = Array.from(document.querySelectorAll('[data-fly]'));
     let rafId = 0;
 
+    // Fast reveal helper
+    const checkReveals = () => {
+      const windowH = window.innerHeight;
+      revealElements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= windowH + 120 && rect.bottom >= -50) {
+          const delay = element.getAttribute('data-delay');
+          if (delay) {
+            element.style.transitionDelay = `${delay}ms`;
+          }
+          element.classList.add('is-visible');
+        }
+      });
+    };
+
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,12 +39,17 @@ function useSiteMotion() {
         });
       },
       {
-        threshold: 0.16,
-        rootMargin: '0px 0px -10% 0px',
+        threshold: 0,
+        rootMargin: '150px 0px 100px 0px',
       },
     );
 
     revealElements.forEach((element) => revealObserver.observe(element));
+
+    // Run immediate check so visible elements never show blank space
+    checkReveals();
+    setTimeout(checkReveals, 100);
+    setTimeout(checkReveals, 400);
 
     const updateFlyItems = () => {
       flyElements.forEach((element) => {
@@ -52,12 +72,11 @@ function useSiteMotion() {
     if (prefersReducedMotion) {
       revealElements.forEach((element) => element.classList.add('is-visible'));
       updateFlyItems();
-
       return () => revealObserver.disconnect();
     }
 
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 1.0,
       smoothWheel: true,
       wheelMultiplier: 0.95,
       touchMultiplier: 1.05,
@@ -72,12 +91,22 @@ function useSiteMotion() {
 
     const onScroll = () => {
       updateFlyItems();
+      checkReveals();
     };
 
     lenis.on('scroll', onScroll);
     updateFlyItems();
     rafId = window.requestAnimationFrame(onFrame);
-    window.addEventListener('resize', updateFlyItems);
+
+    window.addEventListener('resize', () => {
+      updateFlyItems();
+      checkReveals();
+    });
+
+    window.addEventListener('hashchange', () => {
+      setTimeout(checkReveals, 50);
+      setTimeout(checkReveals, 300);
+    });
 
     return () => {
       revealObserver.disconnect();

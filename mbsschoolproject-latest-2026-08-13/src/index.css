@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 bg-brand-cream font-body text-slate-700;
+  }
+
+  body.lenis {
+    scroll-behavior: auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply relative mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .hero-orb {
+    background-size: 42px 42px;
+    background-position: 0 0, 0 21px, 21px -21px, -21px 0;
+  }
+
+  .outline-dash {
+    stroke-dasharray: 10 12;
+  }
+
+  .story-ring {
+    box-shadow: 0 0 0 10px rgba(244, 180, 0, 0.08);
+  }
+
+  .message-orbit {
+    --orbit-size: 136px;
+  }
+
+  .message-orbit-dot {
+    animation: leadershipOrbit 9s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
+
+  .modal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #0f6b3e transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .modal-scroll::-webkit-scrollbar-button,
+  .modal-scroll::-webkit-scrollbar-corner {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar-track {
+    margin: 14px 0;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+  }
+
+  .modal-scroll::-webkit-scrollbar-thumb {
+    min-height: 70px;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    border-radius: 999px;
+    background: #0f6b3e;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  }
+
+  .modal-scroll::-webkit-scrollbar-thumb:hover {
+    background: #f4b400;
+  }
+
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 42px, 0) scale(0.98);
+    transition:
+      opacity 0.85s ease,
+      transform 0.85s ease;
+    will-change: transform, opacity;
+  }
+
+  [data-reveal='left'] {
+    transform: translate3d(-42px, 24px, 0) scale(0.98);
+  }
+
+  [data-reveal='right'] {
+    transform: translate3d(42px, 24px, 0) scale(0.98);
+  }
+
+  [data-reveal='zoom'] {
+    transform: translate3d(0, 28px, 0) scale(0.9);
+  }
+
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  [data-fly] {
+    transform: translate3d(var(--fly-x, 0), var(--fly-y, 0), 0) rotate(var(--fly-r, 0deg));
+    transition: transform 0.2s linear;
+    will-change: transform;
+  }
+}
+
+@keyframes leadershipOrbit {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(var(--orbit-size)) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(var(--orbit-size)) rotate(-360deg);
+  }
+}
